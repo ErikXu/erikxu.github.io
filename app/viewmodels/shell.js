@@ -1,6 +1,6 @@
 ﻿define(['jquery', 'knockout', 'plugins/router', 'bootstrap'], function ($, ko, router) {
      var routes = [
-       { route: '', title:'主页', moduleId: 'viewmodels/home', nav: true },
+       { route: ['', 'home'], title:'主页', moduleId: 'viewmodels/home', nav: true },
        { route: 'skill', title:'技能', moduleId: 'viewmodels/skill', nav: true },
        { route: 'bookmark', title:'网摘', moduleId: 'viewmodels/bookmark', nav: true }
     ];
