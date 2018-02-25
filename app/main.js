@@ -9,6 +9,7 @@
         'knockout': '../lib/knockout/knockout-3.1.0',
         'jquery': '../lib/jquery/jquery-2.1.1.min',
         'bootstrap': '../lib/bootstrap/js/bootstrap.min',
+        'gojs': '../lib/gojs/go',
         'shared': 'shared'        
     }
 });

@@ -1,68 +1,79 @@
-﻿<div class="row" style="margin: 20px 15px 20px 15px;">
-<div class="col-lg-4">
-<!-- ko foreach: skillOne -->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<span data-bind="text:name"></span>
-		</div>
-		<div class="panel-body" style="font-size:12px;">
-			<!-- ko foreach: subs -->
-			<div style="border-bottom: 1px solid #dbdbdb; margin-top:8px;">
-        	    <p>
-        	        <strong data-bind="text:name"></strong>
-        	        <span class="pull-right text-muted" data-bind="text:level"></span>
-        	    </p>
-        	    <div class="progress progress-striped active" style="margin-bottom:10px; height:15px;">
-        	        <div class="progress-bar" role="progressbar" data-bind="style: { width: level + '%' }, css: $root.getBarClass($index())"></div>
-        	    </div>
-        	</div>
-            <!-- /ko -->
-		</div>
-	</div>
-	<!-- /ko -->
-</div>
-<div class="col-lg-4">
-<!-- ko foreach: skillTwo -->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<span data-bind="text:name"></span>
-		</div>
-		<div class="panel-body" style="font-size:12px;">
-			<!-- ko foreach: subs -->
-			<div style="border-bottom: 1px solid #dbdbdb; margin-top:8px;">
-        	    <p>
-        	        <strong data-bind="text:name"></strong>
-        	        <span class="pull-right text-muted" data-bind="text:level"></span>
-        	    </p>
-        	    <div class="progress progress-striped active" style="margin-bottom:10px; height:15px;">
-        	        <div class="progress-bar" role="progressbar" data-bind="style: { width: level + '%' }, css: $root.getBarClass($index())"></div>
-        	    </div>
-        	</div>
-            <!-- /ko -->
-		</div>
-	</div>
-	<!-- /ko -->
-</div>
-<div class="col-lg-4">
-<!-- ko foreach: skillThree -->
-	<div class="panel panel-info">
-		<div class="panel-heading">
-			<span data-bind="text:name"></span>
-		</div>
-		<div class="panel-body" style="font-size:12px;">
-			<!-- ko foreach: subs -->
-			<div style="border-bottom: 1px solid #dbdbdb; margin-top:8px;">
-        	    <p>
-        	        <strong data-bind="text:name"></strong>
-        	        <span class="pull-right text-muted" data-bind="text:level"></span>
-        	    </p>
-        	    <div class="progress progress-striped active" style="margin-bottom:10px; height:15px;">
-        	        <div class="progress-bar" role="progressbar" data-bind="style: { width: level + '%' }, css: $root.getBarClass($index())"></div>
-        	    </div>
-        	</div>
-            <!-- /ko -->
-		</div>
-	</div>
-	<!-- /ko -->
-</div>
+﻿<div class="row" style="margin: 0px 15px 20px 15px;">
+    <div class="col-lg-12">
+        <div class="well" style="padding: 10px; margin-bottom: 10px;">
+            <div class="text-right">
+                <a class="btn" data-bind="css:isTreeVisible() ? 'btn-info' : 'btn-primary', click:hideTree"><i class="fa fa-list"></i></a>
+                <a class="btn" data-bind="css:!isTreeVisible() ? 'btn-info' : 'btn-primary', click:showTree"><i class="fa fa-sitemap"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4" data-bind="visible:!isTreeVisible()">
+        <!-- ko foreach: skillOne -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <span data-bind="text:name"></span>
+            </div>
+            <div class="panel-body" style="font-size: 12px;">
+                <!-- ko foreach: subs -->
+                <div style="border-bottom: 1px solid #dbdbdb; margin-top: 8px;">
+                    <p>
+                        <strong data-bind="text:name"></strong>
+                        <span class="pull-right text-muted" data-bind="text:level"></span>
+                    </p>
+                    <div class="progress progress-striped active" style="margin-bottom: 10px; height: 15px;">
+                        <div class="progress-bar" role="progressbar" data-bind="style: { width: level + '%' }, css: $root.getBarClass($index())"></div>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="col-lg-4" data-bind="visible:!isTreeVisible()">
+        <!-- ko foreach: skillTwo -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <span data-bind="text:name"></span>
+            </div>
+            <div class="panel-body" style="font-size: 12px;">
+                <!-- ko foreach: subs -->
+                <div style="border-bottom: 1px solid #dbdbdb; margin-top: 8px;">
+                    <p>
+                        <strong data-bind="text:name"></strong>
+                        <span class="pull-right text-muted" data-bind="text:level"></span>
+                    </p>
+                    <div class="progress progress-striped active" style="margin-bottom: 10px; height: 15px;">
+                        <div class="progress-bar" role="progressbar" data-bind="style: { width: level + '%' }, css: $root.getBarClass($index())"></div>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="col-lg-4" data-bind="visible:!isTreeVisible()">
+        <!-- ko foreach: skillThree -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <span data-bind="text:name"></span>
+            </div>
+            <div class="panel-body" style="font-size: 12px;">
+                <!-- ko foreach: subs -->
+                <div style="border-bottom: 1px solid #dbdbdb; margin-top: 8px;">
+                    <p>
+                        <strong data-bind="text:name"></strong>
+                        <span class="pull-right text-muted" data-bind="text:level"></span>
+                    </p>
+                    <div class="progress progress-striped active" style="margin-bottom: 10px; height: 15px;">
+                        <div class="progress-bar" role="progressbar" data-bind="style: { width: level + '%' }, css: $root.getBarClass($index())"></div>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="col-lg-12" data-bind="visible:isTreeVisible()">
+        <div id="diagram" style="border: solid 1px #e3e3e3; min-height: 520px; background-color: #dcf5fc;"></div>
+    </div>
 </div>
